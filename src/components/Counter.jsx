@@ -4,7 +4,7 @@ export function Counter() {
   const [counter, setCounter] = useState(0)
 
   function increment() {
-    setCounter(counter + 1)
+    setCounter((prevState) => prevState + 1)
   }
 
   return (
