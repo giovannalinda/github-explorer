@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react"
+
 import { RepositoryItem } from "./RepositoryItem"
+import { Profile } from "./Profile"
 
 import '../styles/repositories.scss'
 
@@ -7,6 +9,8 @@ type Repository = {
   name: string
   description: string
   html_url: string
+  language: string
+  visibility: string
 }
 
 export function RepositoryList() {
@@ -20,7 +24,9 @@ export function RepositoryList() {
 
   return (
     <section className="repository-list">
-      <h1>Lista de repositórios</h1>
+      <div className="profile">
+        <Profile />
+      </div>
 
       <ul>
         {repositories.map(repository => {
