@@ -40,6 +40,7 @@ section.repository-list {
       text-decoration: none;
       font-weight: 500;
       font-size: 15px;
+      white-space: nowrap;
     }
   }
 
@@ -52,13 +53,12 @@ section.repository-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(440px, 250px));
     justify-content: center;
+    grid-gap: 16px;
 
     li {
       padding: 30px;
       border-radius: 10px;
       border: 1px solid $dark;
-      margin: 20px 0 0 20px;
-
       svg {
         margin: 0 7px 0 0;
         color: $light-grey;
