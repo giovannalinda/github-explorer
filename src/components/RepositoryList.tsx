@@ -5,12 +5,13 @@ import { Profile } from "./Profile"
 
 import '../styles/repositories.scss'
 
-type Repository = {
+export type Repository = {
   name: string
   description: string
   html_url: string
   language: string
   visibility: string
+  stargazers_count: number
 }
 
 export function RepositoryList() {
@@ -19,7 +20,7 @@ export function RepositoryList() {
   useEffect(() => {
     fetch('https://api.github.com/users/giovannalinda/repos')
       .then(response => response.json())
-      .then(data => setRepositories(data))
+      .then(setRepositories)
   }, [])
 
   return (

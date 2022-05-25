@@ -1,20 +1,15 @@
-import { FiBook } from 'react-icons/fi'
+import { FiBook, FiStar } from 'react-icons/fi'
+import { Repository } from './RepositoryList'
 
 type RepositoryItemProps = {
-  repository: {
-    name: string
-    description: string
-    html_url: string
-    language: string
-    visibility: string
-  }
+  repository: Repository
 }
 
 export function RepositoryItem({ repository }: RepositoryItemProps) {
   return (
     <li>
       <strong>
-        <FiBook size={17} />
+        <FiBook size={16} />
         {repository.name}
       </strong>
       <span>{repository.visibility}</span>
@@ -24,6 +19,12 @@ export function RepositoryItem({ repository }: RepositoryItemProps) {
       <h5>
         {repository.language ?? 'Linguagem não definida'}
       </h5>
+      {repository.stargazers_count > 0 && (
+        <div className='starred'>
+          <FiStar size={16} />
+          {repository.stargazers_count}
+        </div>
+      )}
       <a href={repository.html_url} target="_blank">
         Acessar repositório
       </a>

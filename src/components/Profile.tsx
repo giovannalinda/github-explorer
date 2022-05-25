@@ -7,7 +7,7 @@ export function Profile() {
       />
       <h1>Giovanna Linda</h1>
       <p>a front end developer who is always looking for the next level 💜</p>
-      <a href="https://github.com/giovannalinda" target="_blank">Follow</a>
+      <a href="https://github.com/giovannalinda" target="_blank">Follow me</a>
     </>
   )
 }

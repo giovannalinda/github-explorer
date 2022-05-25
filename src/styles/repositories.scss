@@ -44,16 +44,20 @@ section.repository-list {
   }
 
   ul {
+    div.starred {
+      margin: 10px 0 0 0;
+    }
+
     list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(440px, 250px));
+    justify-content: center;
 
     li {
       padding: 30px;
       border-radius: 10px;
       border: 1px solid $dark;
-      
-      & + li {
-        margin-top: 20px;
-      }
+      margin: 20px 0 0 20px;
 
       svg {
         margin: 0 7px 0 0;
